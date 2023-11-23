@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="shortcut icon" type="image/png" href="images/vlcsnap-6583-11-13-07h03m59s011.png"> -->
+
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="menu-icon"><span class="fas fa-bars"></span></div>
+        <div class="logo">Misjules</div>
+        <div class="nav-items">
+            <li class="menu"><a href="index.html" class="navLink">Home</a></li>
+            <li class="menu"><a href="gallery.html" class="navLink">Gallery</a></li>
+            <li class="menu">
+                <a href="about.html" class="navLink">About</a>
+                <ul>
+                    <li class="cat"><a href="about.html#about" class="catLink">Story</a></li>
+                    <li class="cat"><a href="about.html#team" class="catLink">Team</a></li>
+                    <li class="cat"><a href="about.html#contact" class="catLink">Contact</a></li>
+                </ul>
+            </li>
+        </div>
+        <div class="search-icon"><span class="fas fa-search"></span></div>
+        <div class="cancel-icon"><span class="fas fa-times"></span></div>
+        <form method="post" action="">
+            <input type="text" class="search-data" placeholder="Search" name="search" required>
+            <button type="submit" class="fas fa-search" name="submit"></button>
+        </form>
+    </nav>
+
+    <section class="about" id="about">
+        <div class="aboutContainer">
+            <h3>About <span>Misjules</span></h3>
+            <p>At Misjules Fabrics and Accessories, located in the heart of MSP Centre Enugu, we specialize in offering a diverse array of high-quality fabrics, trendy accessories, luxurious beddings, exquisite duvets, and stylish shoes. Our commitment to
+                excellence is evident in every thread we source, especially in our premium selection of pure cotton sourced meticulously from Aba. We pride ourselves on being just a call away, ready to cater to your fashion needs and elevate your style
+                effortlessly. With a passion for quality and an eye for the latest trends, Misjules is your go-to destination for finding the perfect blend of comfort, style, and sophistication. Find us not just within the walls of our store but also
+                on social media platforms like Instagram, TikTok, and Facebook, where our vibrant community connects, shares, and explores the latest arrivals and timeless classics. Follow us for exclusive insights, behind-the-scenes looks, and style
+                inspirations that redefine fashion in every stitch. Step into Misjules Fabrics and Accessories, where every purchase isn’t just a transaction but a doorway to a world of elegance and refinement crafted just for you.</p>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <h3>Our Team</h3>
+        <div class="teamContainer">
+            <div class="teamBox">
+                <div class="teamImg">
+                    <img src="image/1.jpeg">
+                </div>
+                <div class="teamContent">
+                    <h4>Uche Julliet</h4>
+                    <h6>CEO</h6>
+                    <p>The visionary entrepreneur behind Misjules Fabrics and Accessories. With a passion for style, an unwavering commitment to quality, and a keen eye for trends, Mrs Julliet embarked on a journey to redefine the fashion landscape. Driven
+                        by a relentless pursuit of excellence, Mrs Julliet established Misjules as more than just a brand—it's a reflection of their dedication to curating an exquisite collection of fabrics, accessories, beddings, duvets, and shoes. With
+                        a personal touch in every selection, Mrs Julliet ensures that each piece meets the highest standards of quality and style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="sectionLike">
+        <div class="likeContainer">
+            <div class="likeBox">
+                <div class="likeBoxContent">
+                    <p>Join Us at <span>Misjules fabrics and Accessories</span> and experience quality</p>
+                </div>
+            </div>
+            <div class="likeBox">
+                <div class="likeBoxContent">
+                    <h6>Follow Us</h6>
+                    <div class="socialBox">
+                        <span class="fab fa-facebook-f link"></span>
+                        <!-- <span class="fab fa-twitter link"></span> -->
+                        <a href="https://www.instagram.com/misjules_fabrics_accessories"><span class="fab fa-instagram link"></span></a>
+                        <!-- <span class="fab fa-linkedin link"></span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="likeBox">
+                <div class="likeBoxContent">
+                    <h6>Contact Us</h6>
+                    <div class="socialBox">
+                        <p><span class="fas fa-phone link"></span> +2347016376772</p>
+                        <p><span class="fas fa-envelope link"></span> uchejuliet1980@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script>
+        // script for navbar 
+
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+</body>
+
+</html>

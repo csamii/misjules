@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="shortcut icon" type="image/png" href="images/vlcsnap-6583-11-13-07h03m59s011.png"> -->
+
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="menu-icon"><span class="fas fa-bars"></span></div>
+        <div class="logo">Misjules</div>
+        <div class="nav-items">
+            <li class="menu"><a href="index.html" class="navLink">Home</a></li>
+            <li class="menu"><a href="gallery.html" class="navLink">Gallery</a></li>
+            <li class="menu">
+                <a href="about.html" class="navLink">About</a>
+                <ul>
+                    <li class="cat"><a href="about.html#about" class="catLink">Story</a></li>
+                    <li class="cat"><a href="about.html#team" class="catLink">Team</a></li>
+                    <li class="cat"><a href="about.html#contact" class="catLink">Contact</a></li>
+                </ul>
+            </li>
+        </div>
+        <div class="search-icon"><span class="fas fa-search"></span></div>
+        <div class="cancel-icon"><span class="fas fa-times"></span></div>
+        <form method="post" action="">
+            <input type="text" class="search-data" placeholder="Search" name="search" required>
+            <button type="submit" class="fas fa-search" name="submit"></button>
+        </form>
+    </nav>
+
+    <section class="feature">
+        <div class="featureWrapper75">
+            <h2>Our Products</h2>
+            <div class="featureContainer">
+                <div class="featureContent50">
+                    <div class="featureImgBox">
+                        <img src="image/4.jpeg">
+                    </div>
+                    <div class="featureContentbox">
+                        <h3><a href="#">DreamScape Comforter</a></h3>
+                    </div>
+                </div>
+
+                <div class="featureContent50">
+                    <div class="featureImgBox">
+                        <img src="image/8.png">
+                    </div>
+                    <div class="featureContentbox">
+                        <h3><a href="#">WhisperSoft Blanket</a></h3>
+                    </div>
+                </div>
+
+                <div class="featureContent50">
+                    <div class="featureImgBox">
+                        <img src="image/9.png">
+                    </div>
+                    <div class="featureContentbox">
+                        <h3><a href="#">PureBliss Quilt</a></h3>
+                    </div>
+                </div>
+
+                <div class="featureContent50">
+                    <div class="featureImgBox">
+                        <img src="image/10.png">
+                    </div>
+                    <div class="featureContentbox">
+                        <h3><a href="#">ZenLuxe Bedspread</a></h3>
+                    </div>
+                </div>
+
+                <div class="featureContent50">
+                    <div class="featureImgBox">
+                        <img src="image/6.jpeg">
+                    </div>
+                    <div class="featureContentbox">
+                        <h3><a href="#">EnchantedDreams Coverlet</a></h3>
+                    </div>
+                </div>
+
+                <div class="featureContent50">
+                    <div class="featureImgBox">
+                        <img src="image/3.jpeg">
+                    </div>
+                    <div class="featureContentbox">
+                        <h3><a href="#">TranquilEase Bedding</a></h3>
+                    </div>
+                </div>
+
+                <div class="featureContent50">
+                    <div class="featureImgBox">
+                        <img src="image/2.jpeg">
+                    </div>
+                    <div class="featureContentbox">
+                        <h3><a href="#">CloudNine Quilt</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="featureWrapper25">
+
+        </div>
+    </section>
+
+
+    <footer class="sectionLike">
+        <div class="likeContainer">
+            <div class="likeBox">
+                <div class="likeBoxContent">
+                    <p>Join Us at <span>Misjules fabrics and Accessories</span> and experience quality</p>
+                </div>
+            </div>
+            <div class="likeBox">
+                <div class="likeBoxContent">
+                    <h6>Follow Us</h6>
+                    <div class="socialBox">
+                        <span class="fab fa-facebook-f link"></span>
+                        <!-- <span class="fab fa-twitter link"></span> -->
+                        <a href="https://www.instagram.com/misjules_fabrics_accessories"><span class="fab fa-instagram link"></span></a>
+                        <!-- <span class="fab fa-linkedin link"></span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="likeBox">
+                <div class="likeBoxContent">
+                    <h6>Contact Us</h6>
+                    <div class="socialBox">
+                        <p><span class="fas fa-phone link"></span> +2347016376772</p>
+                        <p><span class="fas fa-envelope link"></span> uchejuliet1980@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script>
+        // script for navbar 
+
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+</body>
+
+</html>
